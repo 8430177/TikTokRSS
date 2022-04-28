@@ -19,6 +19,7 @@ with open('subscriptions.csv') as f:
         user = row['username']
 
         print (user)
+        print ("00000")
 
         tiktoks = api.by_username(user, count=count)
         
