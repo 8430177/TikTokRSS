@@ -16,8 +16,9 @@ with TikTokApi() as api:
             user = row['username']
             print ( user )
             print ("准备开始!!")
-            tiktoks = api.user(username=user, count=count)
-            for video in user.videos():
+            tiktoks = api.user(username=user)
+            for video in tiktoks.videos():
+                print("遍历")
                 print(video.id)
             fg = FeedGenerator()
             fg.id('https://www.tiktok.com/@' + user)
