@@ -20,6 +20,8 @@ jobs:
         run: sudo apt-get update
       - name: Fetch data
         uses: githubocto/flat@v3
+      - name: PlayWright  
+        uses: microsoft/playwright-github-action@v1
         with:
           http_url: https://conoroneill.com/index.xml
           downloaded_filename: conor_rss.xml
