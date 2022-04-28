@@ -14,14 +14,14 @@ jobs:
         uses: denoland/setup-deno@main
         with:
           deno-version: v1.10.x
+      - name: PlayWright  
+        uses: microsoft/playwright-github-action@v1
       - name: Check out repo
         uses: actions/checkout@v2
       - name: update apt
         run: sudo apt-get update
       - name: Fetch data
         uses: githubocto/flat@v3
-      - name: PlayWright  
-        uses: microsoft/playwright-github-action@v1
         with:
           http_url: https://conoroneill.com/index.xml
           downloaded_filename: conor_rss.xml
