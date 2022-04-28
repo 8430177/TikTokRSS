@@ -8,8 +8,6 @@ from datetime import datetime, timezone
 
 # Custom Domain
 ghPagesURL = "https://8430177.github.io/TikTokRSS/"
-
-api = TikTokApi.get_instance()
 count = 10
 with TikTokApi() as api:
     with open('subscriptions.csv') as f:
