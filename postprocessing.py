@@ -14,8 +14,9 @@ with TikTokApi() as api:
         cf = csv.DictReader(f, fieldnames=['username'])
         for row in cf:
             user = row['username']
+            print ( user )
+            print ("准备开始!!")
             tiktoks = api.user(username=user, count=count)
-            print("准备开始!!")
             for video in user.videos():
                 print(video.id)
             fg = FeedGenerator()
