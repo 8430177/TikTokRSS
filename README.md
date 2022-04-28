@@ -1,28 +1,21 @@
-![TikTok RSS Logo](https://tiktokrss.conoroneill.com/favicon-32x32.png)
-# TikTok RSS Using GitHub OCTO Flat Data
-* Generate usable RSS feeds from TikTok using [GitHub OCTO Flat Data](https://octo.github.com/projects/flat-data), GitHub Actions and GitHub Pages.
+![TikTok RSS标志](https://tiktokrss.conoroneill.com/favicon-32x32.png)
+# TikTok RSS使用GitHub OCTO扁平数据
+* 使用[GitHub OCTO Flat Data](https://octo.github.com/projects/flat-data)、GitHub Actions 和 GitHub Pages 从 TikTok 生成可用的 RSS 源。
 
-* This uses the unoffical [TikTokApi Python library](https://github.com/davidteather/TikTok-Api) to extract information about user videos from TikTok as JSON and generate RSS feeds for each user you are interested in.
+* 这使用非官方的[TikTokApi Python库](https://github.com/davidteather/TikTok-Api)从TikTok提取用户视频信息作为JSON，并为你感兴趣的每个用户生成RSS feeds。
 
-* To get your own instance running
-    * Fork this repo 
-    * Enable GitHub Pages for your new repo
-    * Change the `ghPagesURL` in postprocessing.py from "https://conoro.github.io/tiktok-rss-flat/" to your URL
-    * Add the TikTok usernames that you like to subscriptions.csv
-    * Make sure to enable Actions in the Actions tab 
+* 要获得你自己的运行实例
+    * 叉开这个 repo 
+    * 为你的新 repo 启用 GitHub Pages
+    * 将postprocessing.py中的`ghPagesURL`从 "https://conoro.github.io/tiktok-rss-flat/"改为你的网址
+    * 将你喜欢的TikTok用户名添加到subscriptions.csv中。
+    * 确保在Actions标签中启用Actions 
 
-* It's set to run once per hour and generates one RSS XML file per user in the rss output directory.
+* 它被设置为每小时运行一次，在rss输出目录中为每个用户生成一个RSS XML文件。
 
-* You then subscribe to each feed in [Feedly](https://www.feedly.com) or another feed reader using a GitHub Pages URL. Those URLs are constructed like so. E.g.:
+* 然后你在[Feedly](https://www.feedly.com)或其他使用GitHub页面URL的feed阅读器中订阅每个feed。这些URL的构造是这样的。例如：。
 
-    * TikTok User = iamtabithabrown
-    * XML File = rss/iamtabithabrown.xml
-    * Feedly Subscription URL = https://conoro.github.io/tiktok-rss-flat/rss/iamtabithabrown.xml
-    * (Or in my case where I've set a custom domain for the GitHub Pages project called tiktokrss.conoroneill.com, the URL is https://tiktokrss.conoroneill.com/rss/iamtabithabrown.xml)
-
-Logo was created using the TikTok and RSS [Font Awesome](https://fontawesome.com/license/free) icons via CC BY 4.0 License
-
-Copyright Conor O'Neill, 2021 (conor@conoroneill.com)
-
-License Apache 2.0
-
+    * TikTok 用户 = iamtabithabrown
+    * XML文件 = rss/iamtabithabrown.xml
+    * Feedly订阅URL = https://conoro.github.io/tiktok-rss-flat/rss/iamtabithabrown.xml
+    * （或者在我的案例中，我为GitHub Pages项目设置了一个自定义域名，名为tiktokrss.conoroneill.com，该URL为https://tiktokrss.conoroneill.com/rss/iamtabithabrown.xml）
