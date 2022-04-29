@@ -18,7 +18,7 @@ with open('subscriptions.csv') as f:
             tiktoks = api.user(username=user)
             print("名字:")
             print (tiktoks)
-            for video in user.videos():
+            for video in tiktoks.videos():
                 print("视频id")
                 print(video.id)
             
