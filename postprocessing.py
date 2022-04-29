@@ -15,6 +15,7 @@ with open('subscriptions.csv') as f:
         with TikTokApi() as api:
             user = row['username']
             print ("准备开始!!")
+            print (TikTokApi.VERSION)
             tiktoks = api.user(username=user)
             print("名字:")
             print (tiktoks)
