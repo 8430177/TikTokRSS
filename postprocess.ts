@@ -19,7 +19,7 @@ const playwright_install = Deno.run({
 await playwright_install.status();
 
 const playwright_configure = Deno.run({
-  cmd: ['sudo', 'npx', 'playwright', 'install-deps'],
+  cmd: ['sudo', 'playwright', 'install-deps'],
 });
 
 await playwright_configure.status();
