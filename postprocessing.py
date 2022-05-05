@@ -9,19 +9,15 @@ from datetime import datetime, timezone
 # Custom Domain
 ghPagesURL = "https://8430177.github.io/TikTokRSS/"
 count = 10
-with open('subscriptions.csv') as f:
-    cf = csv.DictReader(f, fieldnames=['username'])
-    for row in cf:
-        with TikTokApi() as api:
-            user = row['username']
-            print ("准备开始!!")
-            print (TikTokApi.VERSION)
-            tiktoks = api.user(username=user)
-            print("名字:")
-            print (tiktoks)
-            for video in tiktoks.videos():
-                print("视频id")
-                print(video.id)
-            
-            
-            
+with TikTokApi() as api:
+    print("准备开始!!!!")
+    user = api.user(username="therock")
+    print(user)
+    for video in user.videos():
+        print("video.id")
+        print(video.id)
+    print("中间进行!!!!")
+    for liked_video in api.user(username="public_likes").videos():
+        print("liked_video.id")
+        print(liked_video.id)
+          
